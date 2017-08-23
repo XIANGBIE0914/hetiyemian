@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+ <style>
+  *{margin:0px;
+    padding:0px;
+	}
+  .p1{background-color:rgb(13,165,214);
+   width:100%;
+   height:794px;
+     }
+	 .logo{padding:100px 35% 0 35%;
+	 text-align:center;
+	 }
+	 .text{padding:100px 0 20px 0;
+	 text-align:center;
+
+	 }
+	 .info1{
+	 text-align:center
+	 }
+	 .text .xiang{
+	 padding:0 30px 0 30px;
+	 opacity:0;
+	 }
+	 .new .xiang{
+	 padding:0 0px 0 0px;
+	 transition:all 1.5s ease-out 0.3s;
+	 opacity:1;
+	 }
+	.page1{
+	      text-align:center;
+		  }
+
+
+
+  .shield{width:500px;  /* 盾牌*/
+  padding:100px 0 0 100px;
+   display:block;
+   float:left;
+		}
+		.shield img{opacity:0;}
+ .p1{   /*大盒子*/
+ background-color:rgb(42,181,97);
+  width:100%;  
+  height:778px;
+  }  
+  .info{
+		padding:150px 0 0 0;
+		display:block;
+		float:left;
+		}
+
+  .picture{ /*图片样式*/
+		transform:translate(200px,20px) rotate(45deg);
+		}
+ .new img{
+		 transform:translate(0,0)rotate(0deg);
+		 transition:all 1.5s ease-out 0.3s;
+		opacity:1; }
+ 
+  </style>
+
+  <div class="allpage">
+  
+  <div class="section page1">
+<div class="logo">
+  <img src="logo.png">
+  </div>
+  <div class="text">
+  <img src="text_1.png"class="xiang"> 
+  <img src="text_2.png"class="xiang">
+  <img src="text_3.png"class="xiang">
+  <img src="text_4.png"class="xiang">
+  <img src="text_5.png"class="xiang">
+  <img src="text_6.png"class="xiang">
+  <img src="text_7.png"class="xiang">
+  <img src="text_8.png"class="xiang">
+
+  </div>
+  <div class="info1">
+  <img src="info_1.png">
+  </div>
+       
+
+  </div>
+
+      <div class="section page2">
+	  <div class="shield">
+ <img src="shield_1.png"class="picture">
+ <img src="shield_2.png"class="picture">
+ <img src="shield_3.png"class="picture"></br>
+ <img src="shield_4.png"class="picture">
+ <img src="shield_5.png"class="picture">
+ <img src="shield_6.png"class="picture"></br>
+ <img src="shield_7.png"class="picture">
+ <img src="shield_8.png"class="picture">
+ <img src="shield_9.png"class="picture">
+ </div>
+ <div class="info">
+ <img src="info_2.png">
+ </div>
+
+
+      </div>
+
+  <script src="1.js"></script>
+  <script src="2.js"></script>
+<script>
+ 
+  $(".allpage").fullpage({
+	  sectionsColor:["rgb(13,165,214)","rgb(42,182,96)"],
+	  
+	  afterLoad:function(a,b){
+						if (b == 1)
+						{ 
+								$(".text").removeClass("new");
+							setTimeout(function()  {
+								$(".text").addClass("new");
+							},500);
+						}
+	  if (b == 2)
+	  {
+
+		  $(".shield").removeClass("new");
+		  setTimeout(function(){
+				$(".shield").addClass("new");
+		  },500);
+	  }
+  }
+  
+  });
+  </script>
+
+ </body>
+</html>
